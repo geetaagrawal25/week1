@@ -24,9 +24,9 @@ snarkjs r1cs info Multiplier3_plonk/Multiplier3.r1cs
 
 snarkjs plonk setup Multiplier3_plonk/Multiplier3.r1cs powersOfTau28_hez_final_10.ptau Multiplier3_plonk/circuit_final.zkey
 # snarkjs zkey contribute Multiplier3/circuit_0000.zkey Multiplier3/circuit_final.zkey --name="1st Contributor Name" -v -e="random text"
-# snarkjs zkey export verificationkey Multiplier3/circuit_final.zkey Multiplier3/verification_key.json
+snarkjs zkey export verificationkey Multiplier3_plonk/circuit_final.zkey Multiplier3/verification_key.json
 
 # generate solidity contract
-snarkjs zkey export solidityverifier Multiplier3_plonk/circuit_final.zkey ../Multiplier3Verifier.sol
+snarkjs zkey export solidityverifier Multiplier3_plonk/circuit_final.zkey ../Multiplier3Verifier_plonk.sol
 
 cd ../..
