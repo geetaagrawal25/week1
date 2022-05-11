@@ -136,10 +136,8 @@ describe("Multiplier3 with PLONK", function () {
     
         const a = [argv[0], argv[1]];
         const b = [[argv[2], argv[3]], [argv[4], argv[5]]];
-        const c = [argv[6], argv[7]];
-        const Input = argv.slice(8);
-
-        expect(await verifier.verifyProof(a, b, c, Input)).to.be.true;
+    
+        expect(await verifier.verifyProof(a, b)).to.be.true;
     });
 
     it("Should return false for invalid proof", async function () {
